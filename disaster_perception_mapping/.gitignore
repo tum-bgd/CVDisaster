@@ -2,3 +2,4 @@ data/
 *.h5
 log*
 *.txt
+.bash*

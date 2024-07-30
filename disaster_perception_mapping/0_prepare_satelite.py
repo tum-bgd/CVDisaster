@@ -28,7 +28,7 @@ def CutSTLImages(
     tifInfos: list,
     saveTif=False
 ) -> None:
-    with open('./data/02_SVOI_point/SVI_all_subset.geojson', 'r') as f:
+    with open('./data/02_SVOI_point/SVI_position.geojson', 'r') as f:
         mappings = geojson.load(f)["features"]
     for sviImageName in os.listdir(srcDirSVI):
         sviPoint = sviImageName[:-4].split('.')[0]

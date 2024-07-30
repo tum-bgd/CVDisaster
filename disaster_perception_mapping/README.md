@@ -29,9 +29,9 @@
 
 3. `2_cv.py` will generate cross-view results (`GCViTTiny`). You can also change backbones of the model and specify training ratio using command-line options.
 
-  ```bash
-  python 2_cv.py --tr-ratio 0.5 --backbone tiny
-  ```
+    ```bash
+    python 2_cv.py --tr-ratio 0.5 --backbone tiny
+    ```
 
 4. `3_estimation.py` can create a text file where each line contains the estimation results, ground truth and corresponding images (ID).
 
