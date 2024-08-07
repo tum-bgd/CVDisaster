@@ -1,6 +1,6 @@
 # CVDisaster
 ## Cross-View Geolocalization and Disaster Mapping with Street-View and VHR Satellite Imagery: A Case Study of Hurricane IAN
-Authors: Li, Hao and Deuser, Fabian and Yin, Wenping and Luo, Xuanshu and Walther, Paul and Mai, Gengchen and Huang, Wei and Werner, Martin
+Authors: Li, Hao, Deuser, Fabian, Yin, Wenping, Luo, Xuanshu, Walther, Paul, Mai, Gengchen, Huang, Wei and Werner, Martin
 
 <p align="center"> 
      <img src="./images/overview.png" width="800"> 
