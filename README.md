@@ -21,7 +21,7 @@ CVDisaster consists of two cross-view models:
 ---
 ### Install and train
 
-Before training, one need to download the CVIAN dataset from: [doi:10.14459/2024mp1749324](https://doi.org/10.14459/2024mp1749324)
+Before training, one need to download **the CVIAN dataset** from: [doi:10.14459/2024mp1749324](https://doi.org/10.14459/2024mp1749324)
 
 #### For CVDisaster-Geoloc: 
 
