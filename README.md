@@ -86,7 +86,7 @@ Again specify the split you want to evaluate, also change the checkpoint\_start 
 
 CVIAN is a cross-view dataset to support geolocalization and disaster mapping with street-view and very high resolution (VHR) satellite imagery in Florida, USA after Hurricane IAN in 2022. The dataset is openly availble at [doi:10.14459/2024mp1749324](https://doi.org/10.14459/2024mp1749324).
 
-CVIAN contains 1,135 pairs of street-view and VHR satellite imagery, which are manually classified into 3 classes (i.e., light, medium, and heavy damage). The VHR satellite imagery was originally provided by the National Oceanic and Atmospheric Administration (NOAA) at a spatial resolution of 30cm per pixel on September 30, 2022. The street-view imagery was collected from the open-source Mapilliary platform, speicifally from a mapping campaign done by Site Tour 360 after Hurricane IAN hit the study area. 
+CVIAN contains 4,121 pairs of street-view and VHR satellite imagery, which are manually classified into 3 classes (i.e., light, medium, and heavy damage). The VHR satellite imagery was originally provided by the National Oceanic and Atmospheric Administration (NOAA) at a spatial resolution of 30cm per pixel on September 30, 2022. The street-view imagery was collected from the open-source Mapilliary platform, speicifally from a mapping campaign done by Site Tour 360 after Hurricane IAN hit the study area. 
 
 CVIAN is the first of this kind dataset that can support both cross-view geolocalization and disaster mapping at the same time.
 
