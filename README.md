@@ -101,14 +101,13 @@ CVIAN is the first of this kind dataset that can support both cross-view geoloca
 If you find our work useful in your research please consider citing the CVDisaster paper.  
 ```
 @article{li2024cvdisaster,
-  title={Cross-View Geolocalization and Disaster Mapping with Street-View and VHR Satellite Imagery: A Case Study of Hurricane IAN},
-  author={Li, Hao and Deuser, Fabian and Yin, Wenping and Luo, Xuanshu and Walther, Paul and Mai, Gengchen and Huang, Wei and Werner, Martin},
-  journal={},
-  volume={},
-  number={},
-  pages={},
-  year={2024},
-  publisher={}
+     title={Cross-View Geolocalization and Disaster Mapping with Street-View and VHR Satellite Imagery: A Case Study of Hurricane IAN},
+     author={Li, Hao and Deuser, Fabian and Yin, Wenping and Luo, Xuanshu and Walther, Paul and Mai, Gengchen and Huang, Wei and Werner, Martin},
+     year={2024},
+     eprint={2408.06761},
+     archivePrefix={arXiv},
+     primaryClass={cs.CV},
+     url={https://arxiv.org/abs/2408.06761}, 
 }
 ```
 Please go to [Dr. Hao Li's Homepage](https://bobleegogogo.github.io/) for more information.
