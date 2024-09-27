@@ -55,20 +55,20 @@ def CutSTLImages(
                                 img.save(os.path.join(tarDirSTL, sviPoint + '.png'))
 
 
-os.mkdir('./data/01_Satellite/SAT_ThreeCategories')
-os.mkdir('./data/01_Satellite/SAT_ThreeCategories/0_MinorDamage')
-os.mkdir('./data/01_Satellite/SAT_ThreeCategories/1_ModerateDamage')
-os.mkdir('./data/01_Satellite/SAT_ThreeCategories/2_SevereDamage')
+os.mkdir('./data/01_Satellite/')
+os.mkdir('./data/01_Satellite/0_MinorDamage')
+os.mkdir('./data/01_Satellite/1_ModerateDamage')
+os.mkdir('./data/01_Satellite/2_SevereDamage')
 tifInfos = GetSatelliteRange()
 CutSTLImages(
-    './data/00_SVI/SVI_ThreeCategories/0_MinorDamage',
-    './data/01_Satellite/SAT_ThreeCategories/0_MinorDamage',
+    './data/00_SVI/0_MinorDamage',
+    './data/01_Satellite/0_MinorDamage',
     tifInfos)
 CutSTLImages(
-    './data/00_SVI/SVI_ThreeCategories/1_ModerateDamage',
-    './data/01_Satellite/SAT_ThreeCategories/1_ModerateDamage',
+    './data/00_SVI/1_ModerateDamage',
+    './data/01_Satellite/1_ModerateDamage',
     tifInfos)
 CutSTLImages(
-    './data/00_SVI/SVI_ThreeCategories/2_SevereDamage',
-    './data/01_Satellite/SAT_ThreeCategories/2_SevereDamage',
+    './data/00_SVI/2_SevereDamage',
+    './data/01_Satellite/2_SevereDamage',
     tifInfos)

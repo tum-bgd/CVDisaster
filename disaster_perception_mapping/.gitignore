@@ -1,5 +1,6 @@
-data/
+CVIAN/
 *.h5
 log*
 *.txt
-.bash*
+.*_history
+.*/

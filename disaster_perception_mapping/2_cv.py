@@ -102,15 +102,15 @@ INIT_LR = 0.02
 WAMRUP_LR = 0.004
 
 # build dataset
-dirSVI = pathlib.Path('./data/00_SVI/SVI_ThreeCategories')
-dirSAT = pathlib.Path('./data/01_Satellite/SAT_ThreeCategories')
+dirSVI = pathlib.Path('./CVIAN/00_SVI')
+dirSAT = pathlib.Path('./CVIAN/01_Satellite')
 
 imgCountSVI = len(list(dirSVI.glob('*/*.png')))
-imgCountSAT = len(list(dirSVI.glob('*/*.png')))
+imgCountSAT = len(list(dirSAT.glob('*/*.png')))
 assert(imgCountSVI == imgCountSAT)
 imgCount = imgCountSVI
 
-dirImgSVI = tf.data.Dataset.list_files(str(dirSVI/'*/*'), shuffle=False)
+dirImgSVI = tf.data.Dataset.list_files(str(dirSVI/'*/*.png'), shuffle=False)
 dirImgSVI = dirImgSVI.shuffle(imgCount, reshuffle_each_iteration=False, seed=SEED)
 className = np.array(sorted([item.name for item in dirSVI.glob('*')]))
 
@@ -134,12 +134,11 @@ def LoadImg(img, h=SAT_IMG_H, w=SAT_IMG_W):
 
 def ProcessPath(file_path):
     label = GetLabel(file_path)
-    # Load the raw data from the file as a string
     svi = LoadImg(tf.io.read_file(file_path), w=SVI_IMG_W)
     sat = LoadImg(tf.io.read_file(tf.strings.regex_replace(
         file_path,
-        "00_SVI/SVI",
-        "01_Satellite/SAT")))
+        "00_SVI",
+        "01_Satellite")))
     return (svi, sat), label
 
 def ConfigureData(ds):
