@@ -121,7 +121,7 @@ ckpt_callback = tf.keras.callbacks.ModelCheckpoint(
 
 history = model.fit(trData,
     validation_data=vaData,
-    epochs=20,
+    epochs=EPOCHS,
     callbacks=[ckpt_callback])
 
 model.load_weights(ckpt_path)
