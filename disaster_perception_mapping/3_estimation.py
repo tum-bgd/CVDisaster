@@ -48,15 +48,15 @@ SAT_IMAGE_SIZE = [SAT_IMG_H, SAT_IMG_W]
 SEED = 626
 
 # build dataset
-dirSVI = pathlib.Path('./data/00_SVI/SVI_ThreeCategories')
-dirSAT = pathlib.Path('./data/01_Satellite/SAT_ThreeCategories')
+dirSVI = pathlib.Path('./CVIAN/00_SVI/')
+dirSAT = pathlib.Path('./CVIAN/01_Satellite/')
 
 imgCountSVI = len(list(dirSVI.glob('*/*.png')))
 imgCountSAT = len(list(dirSVI.glob('*/*.png')))
 assert(imgCountSVI == imgCountSAT)
 imgCount = imgCountSVI
 
-dirImgSVI = tf.data.Dataset.list_files(str(dirSVI/'*/*'), shuffle=False)
+dirImgSVI = tf.data.Dataset.list_files(str(dirSVI/'*/*.png'), shuffle=False)
 dirImgSVI = dirImgSVI.shuffle(imgCount, reshuffle_each_iteration=False, seed=SEED)
 className = np.array(sorted([item.name for item in dirSVI.glob('*')]))
 
