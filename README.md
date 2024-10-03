@@ -32,19 +32,48 @@ Before training, one need to download **the CVIAN dataset** from: [doi:10.14459/
     pip install -r ./geolocalization/requirement.txt
     ```
 
-2. Training the model:
+2. Put the `CVIAN` dataset into `./geolocalization`. You should have:
+
+   ```
+    geolocalization
+    ├── 0_prepare_splits_and_data.py
+    ├── 1_train_cvdisaster.py
+    ├── 2_eval_cvdisaster.py
+    ├── requirement.txt
+    ├── ...
+    ├── CVIAN
+    │   ├── 00_SVI
+    │   │   ├── 0_MinorDamage
+    │   │   ├── 1_ModerateDamage
+    │   │   └── 2_SevereDamage
+    │   ├── 01_Satellite
+    │   │   ├── 0_MinorDamage
+    │   │   ├── 1_ModerateDamage
+    │   │   └── 2_SevereDamage
+    │   └── 02_Position
+    │       ├── CVIAN_position.geojson
+    │       └── CVIAN_position_shapefile
+    └── ...
+    ```
+3. Generate the splits and pre-process the images:
 
     ```bash
-    python ./geolocalization/0_train_cvdisaster.py
+    python ./geolocalization/0_prepare_splits_and_data.py
+    ```
+
+4. Training the model:
+
+    ```bash
+    python ./geolocalization/1_train_cvdisaster.py
     ```
 
     Herein, we use a pre-trained Sample4Geo Model please download the CVUSA weights from the [repository](https://github.com/Skyy93/Sample4Geo)
 
 
-3. Evaluate the model
+5. Evaluate the model
 
     ```bash
-    python ./geolocalization/1_eval_cvdisaster.py
+    python ./geolocalization/2_eval_cvdisaster.py
     ```
 
 Again specify the split you want to evaluate, also change the checkpoint\_start parameter in the dataclass to the path of the trained weights.
